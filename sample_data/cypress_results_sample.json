@@ -1,0 +1,330 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 10,
+    "passes": 8,
+    "pending": 0,
+    "failures": 2,
+    "start": "2026-01-15T14:22:10.000Z",
+    "end": "2026-01-15T14:24:32.480Z",
+    "duration": 142480,
+    "testsRegistered": 10,
+    "passPercent": 80,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f1a2b3c4-0001-0001-0001-000000000001",
+      "title": "",
+      "fullFile": "cypress/e2e/widget/checkout-summary-widget/checkout_summary_validation.cy.js",
+      "file": "cypress/e2e/widget/checkout-summary-widget/checkout_summary_validation.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "s-aaa-0000-0000-0000-000000000000",
+          "title": "Checkout Widget - Order Summary Validation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "validate order summary renders correct total - lang: en",
+              "fullTitle": "Checkout Widget - Order Summary Validation validate order summary renders correct total - lang: en",
+              "timedOut": null,
+              "duration": 12500,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"videos/checkout_summary_validation.cy.js.mp4\"",
+              "code": "cy.visitCheckoutShell(region);\ncy.bootstrapApp(environmentConfig.checkoutEnv);\ncy.initializeCheckoutWidget({ lan: language, region, cart: singleItemCart });\ncy.interceptRequest('GET', '**/getOrderSummary**', 'getOrderSummary');\ncy.mountWidget(displayMode);\ncy.validateOrderSummary({ region, language, cart: singleItemCart });",
+              "err": {},
+              "uuid": "t-a1-0000-0000-0000-000000000001",
+              "parentUUID": "s-aaa-0000-0000-0000-000000000000",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "validate order summary renders correct total - lang: fr",
+              "fullTitle": "Checkout Widget - Order Summary Validation validate order summary renders correct total - lang: fr",
+              "timedOut": null,
+              "duration": 13100,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"videos/checkout_summary_validation.cy.js.mp4\"",
+              "code": "cy.visitCheckoutShell(region);\ncy.bootstrapApp(environmentConfig.checkoutEnv);\ncy.initializeCheckoutWidget({ lan: language, region, cart: singleItemCart });\ncy.interceptRequest('GET', '**/getOrderSummary**', 'getOrderSummary');\ncy.mountWidget(displayMode);\ncy.validateOrderSummary({ region, language, cart: singleItemCart });",
+              "err": {},
+              "uuid": "t-a2-0000-0000-0000-000000000002",
+              "parentUUID": "s-aaa-0000-0000-0000-000000000000",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "validate tax breakdown displayed for multi-item cart - lang: en",
+              "fullTitle": "Checkout Widget - Order Summary Validation validate tax breakdown displayed for multi-item cart - lang: en",
+              "timedOut": null,
+              "duration": 60112,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"videos/checkout_summary_validation.cy.js.mp4\"",
+              "code": "cy.visitCheckoutShell(region);\ncy.bootstrapApp(environmentConfig.checkoutEnv);\ncy.initializeCheckoutWidget({ lan: language, region, cart: multiItemCart });\ncy.interceptRequest('GET', '**/getOrderSummary**', 'getOrderSummary');\ncy.mountWidget(displayMode);\ncy.validateTaxBreakdown({ region, language, cart: multiItemCart });",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 60000ms: Expected to find element: `[data-testid=\"order-summary-label\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 60000ms: Expected to find element: `[data-testid=\"order-summary-label\"]`, but never found it.\n    at Context.eval (webpack://storefront-e2e/./cypress/support/widget/checkout-summary-widget/bootstrap_widget_and_validate_details.js:412:9)\n    at wrapped (https://checkout.example.com/__cypress/runner/cypress_runner.js:140147:43)",
+                "diff": null
+              },
+              "uuid": "t-a3-0000-0000-0000-000000000003",
+              "parentUUID": "s-aaa-0000-0000-0000-000000000000",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "validate tax breakdown displayed for multi-item cart - lang: fr",
+              "fullTitle": "Checkout Widget - Order Summary Validation validate tax breakdown displayed for multi-item cart - lang: fr",
+              "timedOut": null,
+              "duration": 14200,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"videos/checkout_summary_validation.cy.js.mp4\"",
+              "code": "cy.visitCheckoutShell(region);\ncy.bootstrapApp(environmentConfig.checkoutEnv);\ncy.initializeCheckoutWidget({ lan: language, region, cart: multiItemCart });\ncy.interceptRequest('GET', '**/getOrderSummary**', 'getOrderSummary');\ncy.mountWidget(displayMode);\ncy.validateTaxBreakdown({ region, language, cart: multiItemCart });",
+              "err": {},
+              "uuid": "t-a4-0000-0000-0000-000000000004",
+              "parentUUID": "s-aaa-0000-0000-0000-000000000000",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "t-a1-0000-0000-0000-000000000001",
+            "t-a2-0000-0000-0000-000000000002",
+            "t-a4-0000-0000-0000-000000000004"
+          ],
+          "failures": [
+            "t-a3-0000-0000-0000-000000000003"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 99912,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "s-bbb-0000-0000-0000-000000000000",
+          "title": "Checkout Widget - Multi-Item Cart Validation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "validate item removed from cart updates total - lang: en",
+              "fullTitle": "Checkout Widget - Multi-Item Cart Validation validate item removed from cart updates total - lang: en",
+              "timedOut": null,
+              "duration": 9800,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"videos/checkout_cart_validation.cy.js.mp4\"",
+              "code": "cy.visitCheckoutShell(region);\ncy.bootstrapApp(environmentConfig.checkoutEnv);\ncy.initializeCheckoutWidget({ lan: language, region, cart: multiItemCart });\ncy.mountWidget(displayMode);\ncy.removeCartItem(itemId);\ncy.validateCartTotalUpdated({ region, language });",
+              "err": {},
+              "uuid": "t-b1-0000-0000-0000-000000000005",
+              "parentUUID": "s-bbb-0000-0000-0000-000000000000",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "validate item removed from cart updates total - lang: fr",
+              "fullTitle": "Checkout Widget - Multi-Item Cart Validation validate item removed from cart updates total - lang: fr",
+              "timedOut": null,
+              "duration": 10100,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"videos/checkout_cart_validation.cy.js.mp4\"",
+              "code": "cy.visitCheckoutShell(region);\ncy.bootstrapApp(environmentConfig.checkoutEnv);\ncy.initializeCheckoutWidget({ lan: language, region, cart: multiItemCart });\ncy.mountWidget(displayMode);\ncy.removeCartItem(itemId);\ncy.validateCartTotalUpdated({ region, language });",
+              "err": {},
+              "uuid": "t-b2-0000-0000-0000-000000000006",
+              "parentUUID": "s-bbb-0000-0000-0000-000000000000",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "validate shipping address autocomplete suggestion list - lang: en",
+              "fullTitle": "Checkout Widget - Multi-Item Cart Validation validate shipping address autocomplete suggestion list - lang: en",
+              "timedOut": null,
+              "duration": 7340,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"videos/checkout_cart_validation.cy.js.mp4\"",
+              "code": "cy.visitCheckoutShell(region);\ncy.bootstrapApp(environmentConfig.checkoutEnv);\ncy.initializeCheckoutWidget({ lan: language, region, cart: multiItemCart });\ncy.mountWidget(displayMode);\ncy.typeShippingAddress(partialAddress);\ncy.validateAutocompleteSuggestions(expectedSuggestions);",
+              "err": {
+                "message": "TypeError: Cannot read properties of undefined (reading 'name')",
+                "estack": "TypeError: Cannot read properties of undefined (reading 'name')\n    at eval (webpack://storefront-e2e/./cypress/support/widget/checkout-summary-widget/cart_widget_cypress_validation.js:214:63)\n    at Array.map (<anonymous>)\n    at Context.eval (webpack://storefront-e2e/./cypress/support/widget/checkout-summary-widget/cart_widget_cypress_validation.js:214:41)\n    at wrapped (https://www.checkout.example.com/__cypress/runner/cypress_runner.js:140147:43)",
+                "diff": null
+              },
+              "uuid": "t-b3-0000-0000-0000-000000000007",
+              "parentUUID": "s-bbb-0000-0000-0000-000000000000",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "t-b1-0000-0000-0000-000000000005",
+            "t-b2-0000-0000-0000-000000000006"
+          ],
+          "failures": [
+            "t-b3-0000-0000-0000-000000000007"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 27240,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "s-ccc-0000-0000-0000-000000000000",
+          "title": "Checkout Widget - Payment Method Validation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "validate saved credit card displayed in payment step - lang: en",
+              "fullTitle": "Checkout Widget - Payment Method Validation validate saved credit card displayed in payment step - lang: en",
+              "timedOut": null,
+              "duration": 5200,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"videos/checkout_payment_validation.cy.js.mp4\"",
+              "code": "cy.visitCheckoutShell(region);\ncy.bootstrapApp(environmentConfig.checkoutEnv);\ncy.initializeCheckoutWidget({ lan: language, region, paymentMethods: savedCards });\ncy.mountWidget(displayMode);\ncy.validateSavedPaymentMethod(savedCards[0]);",
+              "err": {},
+              "uuid": "t-c1-0000-0000-0000-000000000008",
+              "parentUUID": "s-ccc-0000-0000-0000-000000000000",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "validate saved credit card displayed in payment step - lang: fr",
+              "fullTitle": "Checkout Widget - Payment Method Validation validate saved credit card displayed in payment step - lang: fr",
+              "timedOut": null,
+              "duration": 5400,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"videos/checkout_payment_validation.cy.js.mp4\"",
+              "code": "cy.visitCheckoutShell(region);\ncy.bootstrapApp(environmentConfig.checkoutEnv);\ncy.initializeCheckoutWidget({ lan: language, region, paymentMethods: savedCards });\ncy.mountWidget(displayMode);\ncy.validateSavedPaymentMethod(savedCards[0]);",
+              "err": {},
+              "uuid": "t-c2-0000-0000-0000-000000000009",
+              "parentUUID": "s-ccc-0000-0000-0000-000000000000",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "validate promo code discount applied to total - lang: en",
+              "fullTitle": "Checkout Widget - Payment Method Validation validate promo code discount applied to total - lang: en",
+              "timedOut": null,
+              "duration": 6300,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"videos/checkout_payment_validation.cy.js.mp4\"",
+              "code": "cy.visitCheckoutShell(region);\ncy.bootstrapApp(environmentConfig.checkoutEnv);\ncy.initializeCheckoutWidget({ lan: language, region, promoCode: 'SAVE10' });\ncy.mountWidget(displayMode);\ncy.validatePromoDiscountApplied('SAVE10');",
+              "err": {},
+              "uuid": "t-c3-0000-0000-0000-000000000010",
+              "parentUUID": "s-ccc-0000-0000-0000-000000000000",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "t-c1-0000-0000-0000-000000000008",
+            "t-c2-0000-0000-0000-000000000009",
+            "t-c3-0000-0000-0000-000000000010"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 16900,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "[datetime]-[name]-report",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportFilename": "[datetime]-[name]-report",
+        "timestamp": "longDate",
+        "reportDir": "cypress/results/json",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "embeddedScreenshots": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
