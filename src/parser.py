@@ -13,3 +13,18 @@ def calculate_pass_rate(results: dict) -> float:
 
 
 print(f"Pass rate: {calculate_pass_rate(results)}%")
+
+
+def get_failed_tests(results: dict) -> list:
+  failed_tests = []
+  for item in results['results']:
+    for suite in item['suites']:
+       for test in suite['tests']:
+         if test['state'] == 'failed':
+           failed_tests.append(test)
+  return failed_tests
+
+result = get_failed_tests(results)
+
+print(f"Failed tests: {result}")
+print(f"Total failed tests: {len(result)}")
