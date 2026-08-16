@@ -28,3 +28,26 @@ result = get_failed_tests(results)
 
 print(f"Failed tests: {result}")
 print(f"Total failed tests: {len(result)}")
+
+
+class TestSuite:
+  def __init__(self, results: dict):
+    self.results = results
+
+
+  def get_failures(self) -> list:
+    return get_failed_tests(self.results)
+
+  def get_pass_rate(self) -> float:
+    return calculate_pass_rate(self.results)
+
+  def get_duration_seconds(self) -> float:
+    return self.results['stats']['duration'] / 1000
+
+  def __repr__(self) -> str:
+    return f"TestSuite(pass_rate={self.get_pass_rate()}, Total Failures ={len(self.get_failures())})"
+
+
+suite = TestSuite(results)
+print(suite)
+print(f"Duration: {suite.get_duration_seconds()} seconds")
